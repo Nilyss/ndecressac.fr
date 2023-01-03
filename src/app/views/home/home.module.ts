@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component'
 import { HeaderComponent } from '../components/header/header.component'
 import { StackBannerComponent } from '../components/home/stack-banner/stack-banner.component'
 import { LandingComponent } from '../components/home/landing/landing.component'
+import { AboutComponent } from '../components/home/about/about.component'
 import { FooterComponent } from '../components/footer/footer.component'
 
 // ********** ROUTES **********
@@ -18,6 +19,7 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
     HomeComponent,
     HeaderComponent,
     LandingComponent,
+    AboutComponent,
     StackBannerComponent,
     FooterComponent,
   ],
