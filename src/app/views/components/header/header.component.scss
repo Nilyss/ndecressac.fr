@@ -1,0 +1,54 @@
+// ********** UTILS **********
+@import '../../../utils/styles/variables';
+@import '../../../utils/styles/mixins';
+@import '../../../utils/styles/keyframes';
+
+.header {
+  @media (max-width: $breakpointMobile) {
+    flex-flow: column;
+    gap: 2em;
+  }
+  background: $primaryBackgroundColor;
+  border-bottom: 3px solid $senaryBackgroundColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.header__leftSideWrapper {
+}
+
+.header__rightSideWrapper {
+}
+
+// ********** TITLE **********
+
+.header__leftSideWrapper__title {
+  color: $primaryTextColor;
+  font: $titleStyle;
+  font-size: 1.8em;
+}
+
+// ********** NAVIGATION **********
+
+.header__rightSideWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.header__rightSideWrapper__icon {
+  font-size: $iconsSize;
+  color: $iconsColor;
+}
+
+.header__rightSideWrapper__buttonWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.header__rightSideWrapper__buttonWrapper__button {
+  font-family: $primaryFont;
+  @include buttonStyle;
+}

@@ -1,15 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-home',
   template: `
-    <p>
-      home works!
-    </p>
+    <app-header></app-header>
+    <app-footer></app-footer>
   `,
-  styles: [
-  ]
+  styles: [],
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
