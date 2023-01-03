@@ -33,3 +33,9 @@
   font-family: $primaryFont;
   @include buttonStyle;
 }
+
+.footer__credential {
+  font-size: 14px;
+  margin-top: 2em;
+  color: $quaternaryTextColor;
+}

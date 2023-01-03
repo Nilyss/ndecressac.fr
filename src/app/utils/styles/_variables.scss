@@ -11,21 +11,31 @@ $septenaryBackgroundColor: #19191D;
 $primaryTextColor: #f2f2f2;
 $secondaryTextColor: #FF8E5E;
 $tertiaryTextColor: #2b2a33;
-
-// ********** BORDER COLORS **********
+$quaternaryTextColor: #808080;
 
 // ********** SHADOWS **********
+$boxShadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+$boxShadowMobile: rgba(255, 142, 94, 0.4) 0 2px 4px, rgba(255, 142, 94, 0.3) 0 7px 13px -3px,
+rgba(255, 142, 94, 0.2) 0px -3px 0px inset;
+$dropShadow: drop-shadow(20px 10px 4px rgba(20, 20, 20, 0.2));
 
 // ********** FONTS **********
 $primaryFont: 'Ubuntu', sans-serif;
 $secondaryFont: 'Shadows Into Light', sans-serif;
 $titleStyle: 700 2rem $primaryFont;
+$subtitleStyle: 400 1.5rem $primaryFont;
+$paragraphStyle: 400 1rem $primaryFont;
 
 // ********** ICONS **********
 $iconsSize: 1.3em;
 $iconsColor: $primaryTextColor;
 
-// ********** MEDIA QUERIES **********
+// ********** COMPONENTS SEPARATOR **********
+$bottomComponentSeparator: 4px solid $senaryBackgroundColor;
+
+
+// ********** BREAKPOINTS **********
 $breakpointLaptop: 1366px;
 $breakpointTablet: 1024px;
 $breakpointMobile: 768px;

@@ -9,17 +9,11 @@
     gap: 2em;
   }
   background: $primaryBackgroundColor;
-  border-bottom: 3px solid $senaryBackgroundColor;
+  border-bottom: $bottomComponentSeparator;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 40px;
-}
-
-.header__leftSideWrapper {
-}
-
-.header__rightSideWrapper {
 }
 
 // ********** TITLE **********
