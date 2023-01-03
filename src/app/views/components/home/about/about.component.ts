@@ -64,54 +64,10 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
           </p>
           <ul class="about__firstArticle__leftContent__listStackWrapper">
             <li
+              *ngFor="let stack of stacks"
               class="about__firstArticle__leftContent__listStackWrapper__stack"
             >
-              HTML5
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              CSS3
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              JavaScript
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              TypeScript
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              Angular 2+
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              React.js
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              React-native
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              NgRx
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              Redux-toolkit
-            </li>
-            <li
-              class="about__firstArticle__leftContent__listStackWrapper__stack"
-            >
-              Node.js
+              {{ stack.techno }}
             </li>
           </ul>
         </div>
@@ -136,12 +92,14 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
         <!-- ********** SECOND ARTICLE - LEFT SIDE ********** -->
 
         <div class="about__secondArticle__leftContent">
-          <p class="about__secondArticle__leftContent__emoji emoji">🎓</p>
-          <h2
-            class="about__secondArticle__leftContent__title secondArticleTitle"
-          >
-            Education
-          </h2>
+          <div class="articleHeaderLeft">
+            <p class="about__secondArticle__leftContent__emoji emoji">🎓</p>
+            <h2
+              class="about__secondArticle__leftContent__title secondArticleTitle"
+            >
+              Education
+            </h2>
+          </div>
           <ul
             class="about__secondArticle__leftContent__listItemWrapper listItemWrapper"
           >
@@ -169,18 +127,84 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
                 </p>
               </div>
             </li>
+            <li
+              class="about__secondArticle__leftContent__listItemWrapper__list list"
+            >
+              <h3
+                class="about__secondArticle__leftContent__listItemWrapper__list__item list__item"
+              >
+                French
+              </h3>
+              <div
+                class="about__secondArticle__leftContent__listItemWrapper__list__item__infoWrapper infoWrapper"
+              >
+                <p
+                  class="about__secondArticle__leftContent__listItemWrapper__list__item__infoWrapper__info info"
+                >
+                  Native speaker
+                </p>
+              </div>
+            </li>
+            <li
+              class="about__secondArticle__leftContent__listItemWrapper__list list"
+            >
+              <h3
+                class="about__secondArticle__leftContent__listItemWrapper__list__item list__item"
+              >
+                English
+              </h3>
+              <div
+                class="about__secondArticle__leftContent__listItemWrapper__list__item__infoWrapper infoWrapper"
+              >
+                <p
+                  class="about__secondArticle__leftContent__listItemWrapper__list__item__infoWrapper__info info"
+                >
+                  B2
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
 
         <!-- ********** SECOND ARTICLE - RIGHT SIDE ********** -->
 
         <div class="about__secondArticle__rightContent">
-          <p class="about__secondArticle__rightContent__emoji emoji">💼</p>
-          <h2
-            class="about__secondArticle__rightContent__title secondArticleTitle"
+          <div class="articleHeaderRight">
+            <p class="about__secondArticle__rightContent__emoji emoji">💼</p>
+            <h2
+              class="about__secondArticle__rightContent__title secondArticleTitle"
+            >
+              Professional Experience
+            </h2>
+          </div>
+          <ul
+            class="about__secondArticle__rightContent__listItemWrapper listItemWrapper"
           >
-            Professional Experience
-          </h2>
+            <li
+              *ngFor="let professionalExperience of professionalExperiences"
+              class="about__secondArticle__rightContent__listItemWrapper__list list"
+            >
+              <h3
+                class="about__secondArticle__rightContent__listItemWrapper__list__item list__item"
+              >
+                {{ professionalExperience.company }}
+              </h3>
+              <div
+                class="about__secondArticle__rightContent__listItemWrapper__list__item__infoWrapper infoWrapper"
+              >
+                <p
+                  class="about__secondArticle__rightContent__listItemWrapper__list__item__infoWrapper__info info"
+                >
+                  {{ professionalExperience.position }}
+                </p>
+                <p
+                  class="about__secondArticle__rightContent__listItemWrapper__list__item__infoWrapper__date date"
+                >
+                  {{ professionalExperience.date }}
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </article>
     </section>
@@ -191,7 +215,40 @@ export class AboutComponent {
   faGithub = faGithub
   faTwitterSquare = faTwitterSquare
   faLinkedin = faLinkedin
-  desktopPicture = 'https://i.imgur.com/s2pns4Z.jpg'
+  desktopPicture: string = 'https://i.imgur.com/s2pns4Z.jpg'
+
+  stacks = [
+    {
+      techno: 'HTML5',
+    },
+    {
+      techno: 'CSS3',
+    },
+    {
+      techno: 'JavaScript',
+    },
+    {
+      techno: 'TypeScript',
+    },
+    {
+      techno: 'Angular 2+',
+    },
+    {
+      techno: 'React.js',
+    },
+    {
+      techno: 'React-native',
+    },
+    {
+      techno: 'NgRx',
+    },
+    {
+      techno: 'Redux-toolkit',
+    },
+    {
+      techno: 'Node.js',
+    },
+  ]
 
   educations = [
     {
@@ -201,21 +258,38 @@ export class AboutComponent {
     },
     {
       school: 'Lycée Andrée Malraux',
-      degree: 'Baccalauréat Arts et industries graphiques',
+      degree:
+        "Baccalauréat (Bachelor's degree) in Graphic Arts and Industries (Obtained with distinction)",
       date: '2006 — 2008',
+    },
+    {
+      school: 'Lycée Andrée Malraux',
+      degree:
+        'Professional Studies Certificate (BEP) in Communication and Graphic Industries',
+      date: '2004 — 2006',
     },
   ]
 
   professionalExperiences = [
     {
-      company: 'OpenClassrooms',
-      position: 'Web Developer',
-      date: '2021 — Present',
+      company: 'SITEL',
+      position: 'Customer Service Representative',
+      date: '2021 — 2022',
     },
     {
-      company: 'OpenClassrooms',
-      position: 'Web Developer',
-      date: '2021 — Present',
+      company: 'CARL ZEISS MEDITEC',
+      position: 'Turn-Mill Technician',
+      date: '2016 — 2018',
+    },
+    {
+      company: 'Self-employed entrepreneur',
+      position: 'Repair and Computer Training',
+      date: '2015',
+    },
+    {
+      company: 'SITEL',
+      position: 'ADSL Technician',
+      date: '2013 — 2014',
     },
   ]
 }
