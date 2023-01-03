@@ -1,0 +1,31 @@
+// ********** BACKGROUND COLORS **********
+$primaryBackgroundColor: #2b2a33;
+$secondaryBackgroundColor: #f2f2f2;
+$tertiaryBackgroundColor: #1669B4;
+$quaternaryBackgroundColor: #67F5B1;
+$quinaryBackgroundColor: #FD97CE;
+$senaryBackgroundColor: #808080;
+$septenaryBackgroundColor: #19191D;
+
+// ********** TEXT COLORS **********
+$primaryTextColor: #f2f2f2;
+$secondaryTextColor: #FF8E5E;
+$tertiaryTextColor: #2b2a33;
+
+// ********** BORDER COLORS **********
+
+// ********** SHADOWS **********
+
+// ********** FONTS **********
+$primaryFont: 'Ubuntu', sans-serif;
+$secondaryFont: 'Shadows Into Light', sans-serif;
+$titleStyle: 700 2rem $primaryFont;
+
+// ********** ICONS **********
+$iconsSize: 1.3em;
+$iconsColor: $primaryTextColor;
+
+// ********** MEDIA QUERIES **********
+$breakpointLaptop: 1366px;
+$breakpointTablet: 1024px;
+$breakpointMobile: 768px;

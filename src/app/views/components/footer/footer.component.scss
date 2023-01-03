@@ -1,0 +1,35 @@
+// ********** UTILS **********
+@import '../../../utils/styles/variables';
+@import '../../../utils/styles/mixins';
+@import '../../../utils/styles/keyframes';
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 4em;
+  background: $septenaryBackgroundColor;
+}
+
+.footer__message {
+  @media(max-width: $breakpointMobile) {
+    width: 100%;
+  }
+  font: $titleStyle;
+  width: 450px;
+  text-align: center;
+  font-size: 3em;
+  color: $secondaryTextColor;
+}
+
+.footer__buttonWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.footer__buttonWrapper__button {
+  font-family: $primaryFont;
+  @include buttonStyle;
+}
