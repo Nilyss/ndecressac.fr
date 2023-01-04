@@ -1,9 +1,16 @@
-import { Component } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Subscription } from 'rxjs'
+
+// NgRx
+import { Store } from '@ngrx/store'
+import { ExternalLinkState } from '../../../data/NgRx/controller/externalLink/externalLinkReducer'
+import { selectExternalLinkData } from '../../../data/NgRx/controller/externalLink/externalLinkSelector'
+
+// Models
+import { ExternalLink } from '../../../data/NgRx/models/externalLink'
 
 // ************ ICONS ************
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import * as BrandIcons from '@fortawesome/free-brands-svg-icons'
 
 @Component({
   selector: 'app-header',
@@ -14,28 +21,24 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
       </div>
       <nav class="header__rightSideWrapper">
         <a
+          *ngFor="let externalLink of externalLinks"
           class="header__rightSideWrapper__icon"
-          href="https://github.com/Nilyss"
-          target="GitHub"
-          title="GitHub"
+          [href]="externalLink.url"
+          [target]="externalLink.name"
+          [title]="externalLink.name"
         >
-          <fa-icon [icon]="faGithub"></fa-icon>
-        </a>
-        <a
-          class="header__rightSideWrapper__icon"
-          href="https://twitter.com/@Nilyss_7"
-          target="Twitter"
-          title="Twitter"
-        >
-          <fa-icon [icon]="faTwitterSquare"></fa-icon>
-        </a>
-        <a
-          class="header__rightSideWrapper__icon"
-          href="https://www.linkedin.com/in/nicolas-decressac-2a59a4234"
-          target="LinkedIn"
-          title="LinkedIn"
-        >
-          <fa-icon [icon]="faLinkedin"></fa-icon>
+          <fa-icon
+            *ngIf="externalLink.name === 'GitHub'"
+            [icon]="github"
+          ></fa-icon>
+          <fa-icon
+            *ngIf="externalLink.name === 'Twitter'"
+            [icon]="twitter"
+          ></fa-icon>
+          <fa-icon
+            *ngIf="externalLink.name === 'LinkedIn'"
+            [icon]="linkedin"
+          ></fa-icon>
         </a>
         <div class="header__rightSideWrapper__buttonWrapper">
           <button
@@ -50,8 +53,26 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
   `,
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  faGithub = faGithub
-  faTwitterSquare = faTwitterSquare
-  faLinkedin = faLinkedin
+export class HeaderComponent implements OnInit, OnDestroy {
+  github = BrandIcons.faGithub
+  twitter = BrandIcons.faTwitterSquare
+  linkedin = BrandIcons.faLinkedin
+
+  subscription: Subscription | undefined
+
+  externalLinks: ExternalLink[]
+
+  getExternalLink() {
+    this.subscription = this.store
+      .select(selectExternalLinkData)
+      .subscribe((res: ExternalLink[]) => (this.externalLinks = res))
+  }
+  constructor(private store: Store<{ externalLink: ExternalLinkState }>) {}
+
+  ngOnInit() {
+    this.getExternalLink()
+  }
+  ngOnDestroy() {
+    this.subscription?.unsubscribe()
+  }
 }
