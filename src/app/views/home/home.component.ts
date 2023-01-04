@@ -4,6 +4,10 @@ import { Component } from '@angular/core'
   selector: 'app-home',
   template: `
     <app-header></app-header>
+    <main class="main">
+      <app-landing></app-landing>
+      <app-about></app-about>
+    </main>
     <app-footer></app-footer>
   `,
   styles: [],
