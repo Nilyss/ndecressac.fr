@@ -1,9 +1,22 @@
-import { Component } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Subscription } from 'rxjs'
+
+// NgRx => Different states & selectors
+import { Store } from '@ngrx/store'
+import { ExternalLinkState } from '../../../../data/NgRx/controller/externalLink/externalLinkReducer'
+import { selectExternalLinkData } from '../../../../data/NgRx/controller/externalLink/externalLinkSelector'
+import { StackState } from '../../../../data/NgRx/controller/stack/stackReducer'
+import { selectStackData } from '../../../../data/NgRx/controller/stack/stackSelector'
+import { ExperienceState } from '../../../../data/NgRx/controller/experience/experienceReducer'
+import * as SelectExperiences from '../../../../data/NgRx/controller/experience/experienceSelector'
+
+// Models
+import { ExternalLink } from '../../../../data/NgRx/models/externalLink'
+import { Stack } from '../../../../data/NgRx/models/stack'
 
 // ************ ICONS ************
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import * as BrandIcons from '@fortawesome/free-brands-svg-icons'
+import { Experience } from '../../../../data/NgRx/models/experience'
 
 @Component({
   selector: 'app-about',
@@ -33,33 +46,35 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
             <br />I look forward to learning and growing as a developer, and I
             am eager to tackle new challenges and opportunities in the field.
           </p>
-          <nav class="about__firstArticle__leftContent__linksWrapper">
+          <nav
+            *ngIf="externalLinks"
+            class="about__firstArticle__leftContent__linksWrapper"
+          >
             <a
+              *ngFor="let externalLink of externalLinks"
               class="about__firstArticle__leftContent__linksWrapper__link"
-              href="https://github.com/Nilyss"
-              target="GitHub"
-              title="GitHub"
+              [href]="externalLink.url"
+              [target]="externalLink.name"
+              [title]="externalLink.name"
             >
-              <fa-icon [icon]="faGithub"></fa-icon>
-            </a>
-            <a
-              class="about__firstArticle__leftContent__linksWrapper__link"
-              href="https://twitter.com/@Nilyss_7"
-              target="Twitter"
-              title="Twitter"
-            >
-              <fa-icon [icon]="faTwitterSquare"></fa-icon>
-            </a>
-            <a
-              class="about__firstArticle__leftContent__linksWrapper__link"
-              href="https://www.linkedin.com/in/nicolas-decressac-2a59a4234"
-              target="LinkedIn"
-              title="LinkedIn"
-            >
-              <fa-icon [icon]="faLinkedin"></fa-icon>
+              <fa-icon
+                *ngIf="externalLink.name === 'GitHub'"
+                [icon]="github"
+              ></fa-icon>
+              <fa-icon
+                *ngIf="externalLink.name === 'Twitter'"
+                [icon]="twitter"
+              ></fa-icon>
+              <fa-icon
+                *ngIf="externalLink.name === 'LinkedIn'"
+                [icon]="linkedin"
+              ></fa-icon>
             </a>
           </nav>
-          <p class="about__firstArticle__leftContent__subMessage">
+          <p
+            *ngIf="stacks"
+            class="about__firstArticle__leftContent__subMessage"
+          >
             Here are a few technologies I’ve been working with recently:
           </p>
           <ul class="about__firstArticle__leftContent__listStackWrapper">
@@ -67,7 +82,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
               *ngFor="let stack of stacks"
               class="about__firstArticle__leftContent__listStackWrapper__stack"
             >
-              {{ stack.techno }}
+              {{ stack.name }}
             </li>
           </ul>
         </div>
@@ -211,85 +226,58 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
   `,
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
-  faGithub = faGithub
-  faTwitterSquare = faTwitterSquare
-  faLinkedin = faLinkedin
+export class AboutComponent implements OnInit, OnDestroy {
+  github = BrandIcons.faGithub
+  twitter = BrandIcons.faTwitterSquare
+  linkedin = BrandIcons.faLinkedin
   desktopPicture: string = 'https://i.imgur.com/s2pns4Z.jpg'
 
-  stacks = [
-    {
-      techno: 'HTML5',
-    },
-    {
-      techno: 'CSS3',
-    },
-    {
-      techno: 'JavaScript',
-    },
-    {
-      techno: 'TypeScript',
-    },
-    {
-      techno: 'Angular 2+',
-    },
-    {
-      techno: 'React.js',
-    },
-    {
-      techno: 'React-native',
-    },
-    {
-      techno: 'NgRx',
-    },
-    {
-      techno: 'Redux-toolkit',
-    },
-    {
-      techno: 'Node.js',
-    },
-  ]
+  stacks: Stack[]
 
-  educations = [
-    {
-      school: 'OpenClassrooms',
-      degree: 'Bac +2 Web Developer',
-      date: '2022',
-    },
-    {
-      school: 'Lycée Andrée Malraux',
-      degree:
-        "Baccalauréat (Bachelor's degree) in Graphic Arts and Industries (Obtained with distinction)",
-      date: '2006 — 2008',
-    },
-    {
-      school: 'Lycée Andrée Malraux',
-      degree:
-        'Professional Studies Certificate (BEP) in Communication and Graphic Industries',
-      date: '2004 — 2006',
-    },
-  ]
+  subscription: Subscription | undefined
 
-  professionalExperiences = [
-    {
-      company: 'SITEL',
-      position: 'Customer Service Representative',
-      date: '2021 — 2022',
-    },
-    {
-      company: 'CARL ZEISS MEDITEC',
-      position: 'Turn-Mill Technician',
-      date: '2016 — 2018',
-    },
-    {
-      company: 'Self-employed entrepreneur',
-      position: 'Repair and Computer Training',
-      date: '2015',
-    },
-    {
-      company: 'SITEL',
-      position: 'ADSL Technician',
-      date: '2013 — 2014',
-    },
-  ]
+  externalLinks: ExternalLink[]
+
+  educations: Experience['educations'][]
+  professionalExperiences: Experience['professionalExperiences'][]
+
+  getExternalLink() {
+    this.subscription = this.store
+      .select(selectExternalLinkData)
+      .subscribe((res: ExternalLink[]) => (this.externalLinks = res))
+  }
+
+  getStack() {
+    this.subscription = this.store
+      .select(selectStackData)
+      .subscribe((res: Stack[]) => (this.stacks = res))
+  }
+
+  getExperiences() {
+    this.subscription = this.store
+      .select(SelectExperiences.selectEducationExperiences)
+      .subscribe((res: Experience['educations'][]) => (this.educations = res))
+    this.subscription = this.store
+      .select(SelectExperiences.selectProfessionalExperience)
+      .subscribe(
+        (res: Experience['professionalExperiences'][]) =>
+          (this.professionalExperiences = res)
+      )
+  }
+  constructor(
+    private store: Store<{
+      externalLink: ExternalLinkState
+      stack: StackState
+      experiences: ExperienceState
+    }>
+  ) {}
+
+  ngOnInit() {
+    this.getExternalLink()
+    this.getStack()
+    this.getExperiences()
+  }
+  ngOnDestroy() {
+    this.subscription?.unsubscribe()
+  }
 }
