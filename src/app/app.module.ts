@@ -13,6 +13,8 @@ import { HomeModule } from './views/home/home.module'
 import { StoreModule } from '@ngrx/store'
 import { logMetaReducer } from './data/NgRx/metaReducers/logs'
 import { ExternalLinkReducer } from './data/NgRx/controller/externalLink/externalLinkReducer'
+import { StackReducer } from './data/NgRx/controller/stack/stackReducer'
+import { ExperienceReducer } from './data/NgRx/controller/experience/experienceReducer'
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +25,11 @@ import { ExternalLinkReducer } from './data/NgRx/controller/externalLink/externa
     HomeModule,
     FontAwesomeModule,
     StoreModule.forRoot(
-      { externalLink: ExternalLinkReducer },
+      {
+        externalLink: ExternalLinkReducer,
+        stack: StackReducer,
+        experiences: ExperienceReducer,
+      },
       { metaReducers: [logMetaReducer] }
     ),
   ],
