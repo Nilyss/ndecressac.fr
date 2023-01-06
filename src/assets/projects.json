@@ -1,0 +1,97 @@
+{
+  "projects": [
+    {
+      "_id": "5a9b1b9e3d1e854a68a2668c",
+      "name": "Web App — nailissa.fr",
+      "stack": "Angular 2+ | NgRx | Node.js",
+      "overview": "Création d'un site pour l'entreprise Nailissa, prothésiste ongulaire de La Rochelle. Front-end en Angular 2+, programmation réactive (RxJs), utilisation de NgRx pour gérer les datas. Back-end en Node.js pour la sauvegarde d'utilisateurs, et de prestations.",
+      "thumbnail": "https://imgur.com/TJefrNl.png",
+      "images": [
+        "https://imgur.com/wEDFcdx.png",
+        "https://imgur.com/FnWKaA5.png",
+        "https://imgur.com/nv7fxZf.png",
+        "https://imgur.com/8M4y4eA.png",
+        "https://imgur.com/w67WBv2.png"
+      ],
+      "url": "https://nailissa.fr",
+      "YtUrl": "https://youtu.be/8-V0F_e2wq4"
+    },
+    {
+      "_id": "5a9b1b9e3d1e854a68a2668d",
+      "name": "Mobile App — Vente de Pizza",
+      "stack": "React.Native | Redux-toolkit | Expo",
+      "overview": "Création d'une application mobile - test technique soumis à un collègue auquel je me suis soumis également, par curiosité.",
+      "thumbnail": "https://imgur.com/nDjbqtg.png",
+      "images": [
+        "https://imgur.com/wK8GIcA.png",
+        "https://i.imgur.com/KB4uJS2.jpg",
+        "https://i.imgur.com/ExK1e2Z.jpg"
+      ],
+      "url": "",
+      "YtUrl": "https://youtube.com/shorts/JoaaS3eG5Pc?feature=share"
+    },
+    {
+      "_id": "5a9b1b9e3d1e854a68a2668e",
+      "name": " Web App — Clone de Netflix",
+      "stack": "Angular 2+ | Node.js",
+      "overview": "Clone du site web Netflix afin d'approfondir Angular 2+ Compte utilisateur sur API REST crée pour l'occasion, Requête API existante pour les données relatives au films, et séries.",
+      "thumbnail": "https://imgur.com/J5fOYmL.png",
+      "images": [
+        "https://imgur.com/rlCtQSu.png",
+        "https://imgur.com/hXwH93r.png",
+        "https://imgur.com/9Frzx7x.png",
+        "https://imgur.com/NPAZtN6.png",
+        "https://imgur.com/aHH5WMm.png",
+        "https://imgur.com/5LT8VxM.png",
+        "https://imgur.com/cv7eSfA.png",
+        "https://imgur.com/uJYJDQr.png",
+        "https://imgur.com/NUs2aX7.png",
+        "https://imgur.com/YM2KTPL.png",
+        "https://imgur.com/8QL4DRb.png"
+      ],
+      "url": "",
+      "YtUrl": "https://youtu.be/elWy22m3ypk"
+    },
+    {
+      "_id": "5a9b1b9e3d1e854a68a2668f",
+      "name": "Web App — Porte-Folio",
+      "stack": "React.js",
+      "overview": "Réalisation de mon porte-folio : Le présent site.",
+      "thumbnail": "https://imgur.com/U9finDZ.png",
+      "images": [
+        "https://imgur.com/OWr6KNH.png",
+        "https://imgur.com/cH3kI5x.png",
+        "https://imgur.com/eJJjrPd.png",
+        "https://imgur.com/YT1KSrA.png"
+      ],
+      "url": "https://ndecressac.fr",
+      "YtUrl": ""
+    },
+    {
+      "_id": "5a9b1b9e3d1e854a68a26690",
+      "name": "Web App - Réseau Social",
+      "stack": "React.js | Redux-toolkit | Node.js",
+      "overview": "Création d'un réseau social 'From Scratch', front-end comme back-end. Projet OpenClassrooms diplômant.",
+      "thumbnail": "https://imgur.com/xQ23CL0.png",
+      "images": [
+        "https://imgur.com/mLayrrU.png",
+        "https://imgur.com/wqNOq7R.png",
+        "https://imgur.com/0C64qAe.png"
+      ],
+      "url": "",
+      "YtUrl": "https://youtu.be/GxKmQJofRvo"
+    },
+    {
+      "_id": "5a9b1b9e3d1e854a68a26691",
+      "name": "Web App - API Rest",
+      "stack": "Node.js",
+      "overview": "Création d'une API Rest en Node.js, utilisé un front-end déjà existant. Projet OpenClassrooms.",
+      "thumbnail": "https://imgur.com/wfvRpzQ.png",
+      "images": [
+        "https://imgur.com/vZAoPnY.png"
+      ],
+      "url": "",
+      "YtUrl": ""
+    }
+  ]
+}

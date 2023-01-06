@@ -16,6 +16,7 @@ import { ExternalLinkReducer } from './data/NgRx/controller/externalLink/externa
 import { StackReducer } from './data/NgRx/controller/stack/stackReducer'
 import { ExperienceReducer } from './data/NgRx/controller/experience/experienceReducer'
 import { SkillReducer } from './data/NgRx/controller/skill/skillReducer'
+import { ProjectReducer } from './data/NgRx/controller/project/projectReducer'
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { SkillReducer } from './data/NgRx/controller/skill/skillReducer'
         stack: StackReducer,
         experiences: ExperienceReducer,
         skill: SkillReducer,
+        project: ProjectReducer,
       },
       { metaReducers: [logMetaReducer] }
     ),
