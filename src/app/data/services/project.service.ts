@@ -15,6 +15,7 @@ export class ProjectService {
       .get<Project[]>(this.datasUrl, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-  private datasUrl: string = 'http://localhost:4200/assets/projects.json'
+  private datasUrl: string =
+    'https://nilyss.github.io/ndecressac.fr/assets/projects.json'
   constructor(private http: HttpClient) {}
 }

@@ -16,7 +16,8 @@ export class StackService {
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
 
-  private datasUrl: string = 'http://localhost:4200/assets/stacks.json'
+  private datasUrl: string =
+    'https://nilyss.github.io/ndecressac.fr/assets/stacks.json'
 
   constructor(private http: HttpClient) {}
 }

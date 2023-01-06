@@ -15,6 +15,7 @@ export class SkillService {
       .get<Skill[]>(this.datasUrl, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-  private datasUrl: string = 'http://localhost:4200/assets/skill.json'
+  private datasUrl: string =
+    'https://nilyss.github.io/ndecressac.fr/assets/skill.json'
   constructor(private http: HttpClient) {}
 }

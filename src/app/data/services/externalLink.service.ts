@@ -18,6 +18,7 @@ export class ExternalLinkService {
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
 
-  private datasUrl: string = 'http://localhost:4200/assets/externalLinks.json'
+  private datasUrl: string =
+    'https://nilyss.github.io/ndecressac.fr/assets/externalLinks.json'
   constructor(private http: HttpClient) {}
 }

@@ -15,6 +15,7 @@ export class ExperienceService {
       .get<Experience[]>(this.datasUrl, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-  private datasUrl: string = 'http://localhost:4200/assets/experiences.json'
+  private datasUrl: string =
+    'https://nilyss.github.io/ndecressac.fr/assets/experiences.json'
   constructor(private http: HttpClient) {}
 }
