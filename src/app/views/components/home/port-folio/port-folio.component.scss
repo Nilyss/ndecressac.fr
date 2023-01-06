@@ -6,3 +6,73 @@
 .portFolio {
   @include sectionStyle;
 }
+
+.portFolio__titleWrapper {
+}
+
+.portFolio__titleWrapper__title {
+  display: flex;
+  flex-flow: column;
+  font: $titleStyle;
+  text-align: center;
+  color: $secondaryTextColor;
+}
+
+.portFolio__titleWrapper__title--firstColor {
+  color: $primaryTextColor;
+}
+
+.portFolio__body {
+  @media (max-width: $breakpointTablet) {
+    flex-flow: column;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.portFolio__body__firstWrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+
+.portFolio__body__firstWrapper__imageWrapper {
+  max-width: 500px;
+}
+
+.portFolio__body__firstWrapper__imageWrapper__image {
+  width: 100%;
+}
+
+.portFolio__body__secondWrapper {
+  @media (max-width: $breakpointTablet) {
+    order: 3;
+  }
+  display: flex;
+  flex-flow: column;
+}
+
+.portFolio__body__secondWrapper__imageWrapper {
+  max-width: 250px;
+}
+
+.portFolio__body__secondWrapper__imageWrapper__image {
+  width: 100%;
+  object-position: 0 .45em;
+}
+
+.portFolio__body__thirdWrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+
+.portFolio__body__thirdWrapper__imageWrapper {
+  max-width: 500px;
+}
+
+.portFolio__body__thirdWrapper__imageWrapper__image {
+  width: 100%;
+}
