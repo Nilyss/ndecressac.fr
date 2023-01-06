@@ -7,12 +7,14 @@ import * as ExternalLinksActions from '../../data/NgRx/controller/externalLink/e
 import * as StackActions from '../../data/NgRx/controller/stack/stackAction'
 import * as ExperienceActions from '../../data/NgRx/controller/experience/experienceAction'
 import * as SkillActions from '../../data/NgRx/controller/skill/skillAction'
+import * as ProjectActions from '../../data/NgRx/controller/project/projectAction'
 
 // Models
 import { ExternalLink } from '../../data/NgRx/models/externalLink'
 import { Experience } from '../../data/NgRx/models/experience'
 import { Stack } from '../../data/NgRx/models/stack'
 import { Skill } from '../../data/NgRx/models/skill'
+import { Project } from '../../data/NgRx/models/project'
 
 // Services & State
 import { ExternalLinkService } from '../../data/services/externalLink.service'
@@ -23,6 +25,8 @@ import { ExperienceService } from '../../data/services/experience.service'
 import { ExperienceState } from '../../data/NgRx/controller/experience/experienceReducer'
 import { SkillService } from '../../data/services/skill.service'
 import { SkillState } from '../../data/NgRx/controller/skill/skillReducer'
+import { ProjectService } from '../../data/services/project.service'
+import { ProjectState } from '../../data/NgRx/controller/project/projectReducer'
 
 @Component({
   selector: 'app-home',
@@ -32,6 +36,7 @@ import { SkillState } from '../../data/NgRx/controller/skill/skillReducer'
       <app-landing></app-landing>
       <app-about></app-about>
       <app-skills></app-skills>
+      <app-port-folio></app-port-folio>
     </main>
     <app-footer></app-footer>
   `,
@@ -95,17 +100,29 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe()
   }
 
+  getProjects() {
+    this.subscription = this.projectService
+      .getProjects()
+      .pipe(
+        tap((res: Project[]) => {
+          this.store.dispatch(ProjectActions.getProjects({ project: res }))
+        })
+      )
+      .subscribe()
+  }
   constructor(
     private store: Store<{
       externalLink: ExternalLinkState
       stack: StackState
       experience: ExperienceState
       skill: SkillState
+      project: ProjectState
     }>,
     private externalLinkService: ExternalLinkService,
     private stackService: StackService,
     private experienceService: ExperienceService,
-    private skillService: SkillService
+    private skillService: SkillService,
+    private projectService: ProjectService
   ) {}
 
   ngOnInit() {
@@ -113,6 +130,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.getStack()
     this.getExperiences()
     this.getSkills()
+    this.getProjects()
   }
   ngOnDestroy() {
     this.subscription?.unsubscribe()

@@ -9,6 +9,7 @@ import { StackBannerComponent } from '../components/home/stack-banner/stack-bann
 import { LandingComponent } from '../components/home/landing/landing.component'
 import { AboutComponent } from '../components/home/about/about.component'
 import { SkillsComponent } from '../components/home/skills/skills.component'
+import { PortFolioComponent } from '../components/home/port-folio/port-folio.component'
 import { FooterComponent } from '../components/footer/footer.component'
 
 // ********** ROUTES **********
@@ -23,6 +24,7 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
     AboutComponent,
     StackBannerComponent,
     SkillsComponent,
+    PortFolioComponent,
     FooterComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(homeRoutes), FontAwesomeModule],

@@ -1,5 +1,20 @@
 @import './_variables.scss';
 
+@mixin sectionStyle {
+  @media (max-width: $breakpointLaptop) {
+    gap: 2em;
+    padding: 4em 2em;
+  }
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  background: $primaryBackgroundColor;
+  min-height: 100vh;
+  padding: 4em 10em;
+}
+
 @mixin buttonStyle {
   @media (max-width: $breakpointTablet) {
     font-size: 14px;
