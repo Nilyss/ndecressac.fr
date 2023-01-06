@@ -27,6 +27,7 @@ import { ExperienceState } from '../../data/NgRx/controller/experience/experienc
     <main class="main">
       <app-landing></app-landing>
       <app-about></app-about>
+      <app-skills></app-skills>
     </main>
     <app-footer></app-footer>
   `,

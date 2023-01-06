@@ -13,9 +13,6 @@
 }
 
 .landing {
-  @media (max-width: $breakpointLaptop) {
-    padding: 4em 15em;
-  }
   @media (max-width: $breakpointTablet) {
     padding: 4em 5em;
   }
@@ -27,7 +24,7 @@
   }
   display: flex;
   justify-content: space-between;
-  padding: 4em 25em;
+  padding: 4em 10em;
 }
 
 .landing__contentLeft {
