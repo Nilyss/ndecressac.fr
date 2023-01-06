@@ -52,3 +52,26 @@
     outline: 0;
   }
 }
+
+@mixin listSeparator {
+  &:after {
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 75%;
+    height: 1px;
+    background: $quaternaryTextColor;
+  }
+}
+
+@mixin skillsSeparator {
+  content: '';
+  border-radius: 8px;
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

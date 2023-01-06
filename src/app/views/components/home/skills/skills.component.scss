@@ -1,0 +1,98 @@
+// ********** UTILS **********
+@import '../../../../utils/styles/variables';
+@import '../../../../utils/styles/mixins';
+@import '../../../../utils/styles/keyframes';
+
+.skills {
+  @media (max-width: $breakpointLaptop) {
+    gap: 2em;
+    padding: 4em 2em;
+  }
+  background: $septenaryBackgroundColor;
+  border-bottom: $bottomComponentSeparator;
+  color: $primaryTextColor;
+  padding: 4em 10em;
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+}
+
+.skills__titleWrapper__title {
+  color: $primaryTextColor;
+  font: $titleStyle;
+}
+
+.skills__titleWrapper__title--altColor {
+  color: $secondaryTextColor;
+}
+
+.skills__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills__body__listWrapper {
+  @media (max-width: $breakpointTablet) {
+    flex-flow: column;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300%;
+}
+
+.skills__body__listWrapper__list {
+  @media (max-width: $breakpointTablet) {
+    width: 100%;
+  }
+  list-style: none;
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  padding: 2em;
+  position: relative;
+  top: 0;
+}
+
+.firstBorderLeftColor {
+  &:after {
+    @include skillsSeparator;
+    background: $tertiaryBackgroundColor;
+  }
+}
+
+.secondBorderLeftColor {
+  &:after {
+    @include skillsSeparator;
+    background: $quaternaryBackgroundColor;
+  }
+}
+
+.thirdBorderLeftColor {
+  &:after {
+    @include skillsSeparator;
+    background: $quinaryBackgroundColor;
+  }
+}
+
+.skills__body__listWrapper__list__listTitle {
+  @media (max-width: $breakpointLaptop) {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  font: $subtitleStyle;
+  display: flex;
+  align-items: center;
+  color: $secondaryTextColor;
+}
+
+.skills__body__listWrapper__list__listMessage {
+  @media (max-width: $breakpointLaptop) {
+    font-size: 16px;
+  }
+  font: $paragraphStyle;
+}

@@ -8,6 +8,7 @@ import { HeaderComponent } from '../components/header/header.component'
 import { StackBannerComponent } from '../components/home/stack-banner/stack-banner.component'
 import { LandingComponent } from '../components/home/landing/landing.component'
 import { AboutComponent } from '../components/home/about/about.component'
+import { SkillsComponent } from '../components/home/skills/skills.component'
 import { FooterComponent } from '../components/footer/footer.component'
 
 // ********** ROUTES **********
@@ -21,6 +22,7 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
     LandingComponent,
     AboutComponent,
     StackBannerComponent,
+    SkillsComponent,
     FooterComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(homeRoutes), FontAwesomeModule],

@@ -15,6 +15,7 @@ import { logMetaReducer } from './data/NgRx/metaReducers/logs'
 import { ExternalLinkReducer } from './data/NgRx/controller/externalLink/externalLinkReducer'
 import { StackReducer } from './data/NgRx/controller/stack/stackReducer'
 import { ExperienceReducer } from './data/NgRx/controller/experience/experienceReducer'
+import { SkillReducer } from './data/NgRx/controller/skill/skillReducer'
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { ExperienceReducer } from './data/NgRx/controller/experience/experienceR
         externalLink: ExternalLinkReducer,
         stack: StackReducer,
         experiences: ExperienceReducer,
+        skill: SkillReducer,
       },
       { metaReducers: [logMetaReducer] }
     ),
