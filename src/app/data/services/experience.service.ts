@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import * as Utils from '../Utils'
+import * as Utils from '../../utils/Utils'
 
 // Models
 import { Experience } from '../NgRx/models/experience'
@@ -12,10 +12,8 @@ import { catchError, Observable } from 'rxjs'
 export class ExperienceService {
   getExperiences(): Observable<Experience[]> {
     return this.http
-      .get<Experience[]>(this.datasUrl, Utils.httpOptions)
+      .get<Experience[]>(Utils.experienceEndpoints, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-  private datasUrl: string =
-    'https://nilyss.github.io/ndecressac.fr/assets/experiences.json'
   constructor(private http: HttpClient) {}
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import * as Utils from '../Utils'
+import * as Utils from '../../utils/Utils'
 
 // Models
 import { Project } from '../NgRx/models/project'
@@ -12,10 +12,8 @@ import { catchError, Observable } from 'rxjs'
 export class ProjectService {
   getProjects(): Observable<Project[]> {
     return this.http
-      .get<Project[]>(this.datasUrl, Utils.httpOptions)
+      .get<Project[]>(Utils.projectEndpoints, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-  private datasUrl: string =
-    'https://nilyss.github.io/ndecressac.fr/assets/projects.json'
   constructor(private http: HttpClient) {}
 }
