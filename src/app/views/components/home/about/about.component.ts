@@ -21,13 +21,13 @@ import { Experience } from '../../../../data/NgRx/models/experience'
 @Component({
   selector: 'app-about',
   template: `
-    <section class="about">
+    <section id="about" class="about">
       <!-- ********** FIRST ARTICLE ********** -->
 
       <article class="about__firstArticle">
         <!-- ********** FIRST ARTICLE - LEFT SIDE ********** -->
 
-        <div class="about__firstArticle__leftContent">
+        <div class="about__firstArticle__leftContent" data-aos="fade-up-right">
           <h2 class="about__firstArticle__leftContent__title">
             <span class="about__firstArticle__leftContent__title--altColor"
               >About </span
@@ -89,7 +89,7 @@ import { Experience } from '../../../../data/NgRx/models/experience'
 
         <!-- ********** FIRST ARTICLE - RIGHT SIDE ********** -->
 
-        <div class="about__firstArticle__rightContent">
+        <div class="about__firstArticle__rightContent" data-aos="fade-up-left">
           <figure class="about__firstArticle__rightContent__pictureWrapper">
             <img
               class="about__firstArticle__rightContent__pictureWrapper__picture"
@@ -108,8 +108,14 @@ import { Experience } from '../../../../data/NgRx/models/experience'
 
         <div class="about__secondArticle__leftContent">
           <div class="articleHeaderLeft">
-            <p class="about__secondArticle__leftContent__emoji emoji">🎓</p>
+            <p
+              class="about__secondArticle__leftContent__emoji emoji"
+              data-aos="flip-up"
+            >
+              🎓
+            </p>
             <h2
+              data-aos="flip-up"
               class="about__secondArticle__leftContent__title secondArticleTitle"
             >
               Education
@@ -119,6 +125,7 @@ import { Experience } from '../../../../data/NgRx/models/experience'
             class="about__secondArticle__leftContent__listItemWrapper listItemWrapper"
           >
             <li
+              data-aos="flip-up"
               *ngFor="let education of educations"
               class="about__secondArticle__leftContent__listItemWrapper__list list"
             >
@@ -143,6 +150,7 @@ import { Experience } from '../../../../data/NgRx/models/experience'
               </div>
             </li>
             <li
+              data-aos="flip-up"
               class="about__secondArticle__leftContent__listItemWrapper__list list"
             >
               <h3
@@ -161,6 +169,7 @@ import { Experience } from '../../../../data/NgRx/models/experience'
               </div>
             </li>
             <li
+              data-aos="flip-up"
               class="about__secondArticle__leftContent__listItemWrapper__list list"
             >
               <h3
@@ -185,8 +194,14 @@ import { Experience } from '../../../../data/NgRx/models/experience'
 
         <div class="about__secondArticle__rightContent">
           <div class="articleHeaderRight">
-            <p class="about__secondArticle__rightContent__emoji emoji">💼</p>
+            <p
+              class="about__secondArticle__rightContent__emoji emoji"
+              data-aos="flip-up"
+            >
+              💼
+            </p>
             <h2
+              data-aos="flip-up"
               class="about__secondArticle__rightContent__title secondArticleTitle"
             >
               Professional Experience
@@ -196,6 +211,7 @@ import { Experience } from '../../../../data/NgRx/models/experience'
             class="about__secondArticle__rightContent__listItemWrapper listItemWrapper"
           >
             <li
+              data-aos="flip-up"
               *ngFor="let professionalExperience of professionalExperiences"
               class="about__secondArticle__rightContent__listItemWrapper__list list"
             >

@@ -24,6 +24,35 @@ import * as BrandIcons from '@fortawesome/free-brands-svg-icons'
       <div class="header__leftSideWrapper">
         <h1 class="header__leftSideWrapper__title">Nicolas DECRESSAC</h1>
       </div>
+      <nav class="header__webAppNavigation">
+        <a class="header__webAppNavigation__links" routerLink="" fragment="home"
+          >Home</a
+        >
+        <a
+          class="header__webAppNavigation__links"
+          routerLink=""
+          fragment="about"
+          >About</a
+        >
+        <a
+          class="header__webAppNavigation__links"
+          routerLink=""
+          fragment="skills"
+          >My skills</a
+        >
+        <a
+          class="header__webAppNavigation__links"
+          routerLink=""
+          fragment="portFolio"
+          >Previous work</a
+        >
+        <a
+          class="header__webAppNavigation__links"
+          routerLink=""
+          fragment="footer"
+          >Contact</a
+        >
+      </nav>
       <nav class="header__rightSideWrapper">
         <a
           *ngFor="let externalLink of externalLinks"

@@ -53,7 +53,8 @@
               {"glob": "externalLinks.json", "input": "./", "output": "./assets/mockup/"}
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": []
           },

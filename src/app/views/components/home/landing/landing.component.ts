@@ -46,7 +46,7 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
 
       <!-- ********** STACK BANNER ********** -->
 
-      <section class="stackBanner">
+      <section class="stackBanner" data-aos="slide-right">
         <div class="stackBanner__content">
           <ul class="stackBanner__content__wrapper">
             <li class="stackBanner__content__wrapper__list">Html5</li>

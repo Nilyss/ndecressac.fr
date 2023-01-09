@@ -4,7 +4,9 @@ import { Component, OnInit } from '@angular/core'
   selector: 'app-footer',
   template: `
     <footer id="footer" class="footer">
-      <p class="footer__message">Lets build your project together</p>
+      <p class="footer__message" data-aos="flip-down">
+        Lets build your project together
+      </p>
       <div class="footer__buttonWrapper">
         <button (click)="toggleContact()" class="footer__buttonWrapper__button">
           Get in touch
