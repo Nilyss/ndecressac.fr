@@ -1,7 +1,7 @@
 import { of } from 'rxjs'
 import { HttpHeaders } from '@angular/common/http'
 
-const isProduction: boolean = false
+const isProduction: boolean = true
 
 // ********** HTTP REQUEST ***********
 
