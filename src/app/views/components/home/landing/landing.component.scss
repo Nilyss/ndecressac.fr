@@ -9,6 +9,7 @@
   display: flex;
   flex-flow: column;
     justify-content: center;
+  position: relative;
 }
 
 .landing {
@@ -24,6 +25,15 @@
   display: flex;
   justify-content: space-between;
   padding: 4em 10em;
+}
+
+.landing__contactWrapper {
+  position: absolute;
+  top: 4%;
+  left: 38%;
+}
+
+.landing__contactWrapper__positioning {
 }
 
 .landing__contentLeft {

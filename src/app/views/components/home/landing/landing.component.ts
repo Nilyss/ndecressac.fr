@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 
 // ************ ICONS ************
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
@@ -8,6 +8,12 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
   template: `
     <div class="landingContainer">
       <section class="landing">
+        <div *ngIf="displayContact" class="landing__contactWrapper">
+          <div class="landing__contactWrapper__positioning">
+            <app-contact></app-contact>
+          </div>
+        </div>
+
         <!-- ********** LEFT WRAPPER ********** -->
 
         <article class="landing__contentLeft">
@@ -22,7 +28,10 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
             challenges.
           </p>
           <div class="landing__contentLeft__buttonWrapper">
-            <button class="landing__contentLeft__buttonWrapper__button">
+            <button
+              (click)="toggleContact()"
+              class="landing__contentLeft__buttonWrapper__button"
+            >
               Get in touch
             </button>
           </div>
@@ -91,7 +100,16 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
   `,
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
   profilePicture = 'https://imgur.com/HgYTBC9.png'
   faAsterisk = faAsterisk
+
+  displayContact: boolean
+  toggleContact() {
+    this.displayContact = !this.displayContact
+  }
+
+  ngOnInit() {
+    this.displayContact = false
+  }
 }

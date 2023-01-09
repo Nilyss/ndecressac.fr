@@ -1,6 +1,8 @@
 // ********** MODULES **********
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FormsModule } from '@angular/forms'
 
 // ********** COMPONENTS **********
 import { HomeComponent } from './home.component'
@@ -11,10 +13,10 @@ import { AboutComponent } from '../components/home/about/about.component'
 import { SkillsComponent } from '../components/home/skills/skills.component'
 import { PortFolioComponent } from '../components/home/port-folio/port-folio.component'
 import { FooterComponent } from '../components/footer/footer.component'
+import { ContactComponent } from '../components/contact/contact.component'
 
 // ********** ROUTES **********
 import { RouterModule, Routes } from '@angular/router'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
 @NgModule({
   declarations: [
@@ -26,7 +28,13 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
     SkillsComponent,
     PortFolioComponent,
     FooterComponent,
+    ContactComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(homeRoutes), FontAwesomeModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(homeRoutes),
+    FontAwesomeModule,
+    FormsModule,
+  ],
 })
 export class HomeModule {}
