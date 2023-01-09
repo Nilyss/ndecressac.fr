@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 
 // EmailJs
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser' // https://www.npmjs.com/package/@emailjs/browser
 import EmailJsConfig from '../../../utils/emailJs.config'
 
 @Component({
@@ -138,6 +138,9 @@ import EmailJsConfig from '../../../utils/emailJs.config'
             Send message
           </button>
         </div>
+        <p class="contact__formWrapper__inputsWrapper__submitResponseMessage">
+          {{ submitResponseMessage }}
+        </p>
       </form>
     </article>
   `,
@@ -148,6 +151,7 @@ export class ContactComponent {
   contactPhoneInput: string = ''
   contactEmailInput: string = ''
   contactMessageInput: string = ''
+  submitResponseMessage: string = ''
   sendEmail(event: Event) {
     emailjs
       .sendForm(
@@ -159,12 +163,15 @@ export class ContactComponent {
       .then(
         (result: EmailJSResponseStatus) => {
           console.log(result.text)
-          this.contactEmailInput = ''
+          this.contactNameInput = ''
           this.contactPhoneInput = ''
           this.contactEmailInput = ''
           this.contactMessageInput = ''
+          this.submitResponseMessage = 'Message sent successfully!'
         },
         (error) => {
+          this.submitResponseMessage =
+            'Message not sent, please try again later.'
           console.log(error.text)
         }
       )

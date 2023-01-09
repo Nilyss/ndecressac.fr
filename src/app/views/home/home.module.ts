@@ -14,6 +14,7 @@ import { SkillsComponent } from '../components/home/skills/skills.component'
 import { PortFolioComponent } from '../components/home/port-folio/port-folio.component'
 import { FooterComponent } from '../components/footer/footer.component'
 import { ContactComponent } from '../components/contact/contact.component'
+import { BackToTopComponent } from '../components/back-top-top/backToTop.component'
 
 // ********** ROUTES **********
 import { RouterModule, Routes } from '@angular/router'
@@ -29,6 +30,7 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
     PortFolioComponent,
     FooterComponent,
     ContactComponent,
+    BackToTopComponent,
   ],
   imports: [
     CommonModule,

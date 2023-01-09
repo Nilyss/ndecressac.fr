@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 // ************ ICONS ************
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
@@ -8,12 +8,6 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
   template: `
     <div class="landingContainer">
       <section class="landing">
-        <div *ngIf="displayContact" class="landing__contactWrapper">
-          <div class="landing__contactWrapper__positioning">
-            <app-contact></app-contact>
-          </div>
-        </div>
-
         <!-- ********** LEFT WRAPPER ********** -->
 
         <article class="landing__contentLeft">
@@ -27,14 +21,13 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
             passionate about web development and I'm always looking for new
             challenges.
           </p>
-          <div class="landing__contentLeft__buttonWrapper">
-            <button
-              (click)="toggleContact()"
-              class="landing__contentLeft__buttonWrapper__button"
-            >
-              Get in touch
-            </button>
-          </div>
+          <a class="navLink" routerLink="" fragment="footer">
+            <div class="landing__contentLeft__buttonWrapper">
+              <button class="landing__contentLeft__buttonWrapper__button">
+                Get in touch
+              </button>
+            </div>
+          </a>
         </article>
 
         <!-- ********** RIGHT WRAPPER ********** -->
@@ -100,16 +93,7 @@ import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
   `,
   styleUrls: ['./landing.component.scss'],
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent {
   profilePicture = 'https://imgur.com/HgYTBC9.png'
   faAsterisk = faAsterisk
-
-  displayContact: boolean
-  toggleContact() {
-    this.displayContact = !this.displayContact
-  }
-
-  ngOnInit() {
-    this.displayContact = false
-  }
 }

@@ -7,7 +7,7 @@
   color: $primaryTextColor;
   border: 2px solid $secondaryTextColor;
   border-radius: 8px;
-  padding: 2em;
+  padding: 1em;
 }
 
 .contact__formWrapper {
@@ -201,4 +201,12 @@
   padding: .8em;
   border-radius: 4px;
   cursor: pointer;
+  &:active {
+    background: $secondaryTextColor;
+  }
+}
+
+.contact__formWrapper__inputsWrapper__submitResponseMessage {
+  margin-top: -1em;
+  text-align: center;
 }

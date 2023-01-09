@@ -20,7 +20,7 @@ import * as BrandIcons from '@fortawesome/free-brands-svg-icons'
 @Component({
   selector: 'app-header',
   template: `
-    <header class="header">
+    <header id="home" class="header">
       <div class="header__leftSideWrapper">
         <h1 class="header__leftSideWrapper__title">Nicolas DECRESSAC</h1>
       </div>

@@ -1,7 +1,7 @@
 import { of } from 'rxjs'
 import { HttpHeaders } from '@angular/common/http'
 
-const isProduction: boolean = false
+const isProduction: boolean = true
 
 // ********** HTTP REQUEST ***********
 
@@ -14,8 +14,7 @@ export const httpOptions = {
 
 // ***** ENDPOINTS *****
 const developmentBaseUrl: string = 'http://localhost:4200/assets/'
-const productionBaseUrl: string =
-  'https://nilyss.github.io/ndecressac.fr/assets/'
+const productionBaseUrl: string = 'https://ndecressac.fr/assets/'
 
 export const externalLinkEndpoint = isProduction
   ? productionBaseUrl + 'externalLinks.json'

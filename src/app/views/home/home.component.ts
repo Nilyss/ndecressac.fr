@@ -39,6 +39,7 @@ import { ProjectState } from '../../data/NgRx/controller/project/projectReducer'
       <app-port-folio></app-port-folio>
     </main>
     <app-footer></app-footer>
+    <app-back-to-top></app-back-to-top>
   `,
   styles: [],
 })
