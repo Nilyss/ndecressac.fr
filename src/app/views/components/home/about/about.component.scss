@@ -5,6 +5,7 @@
 
 .about {
   @include sectionStyle;
+  overflow-x: hidden;
 }
 
 // ********** FIRST ARTICLE **********

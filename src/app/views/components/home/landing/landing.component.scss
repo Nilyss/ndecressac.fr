@@ -8,8 +8,9 @@
   background: $primaryBackgroundColor;
   display: flex;
   flex-flow: column;
-    justify-content: center;
+  justify-content: center;
   position: relative;
+  overflow-x: hidden;
 }
 
 .landing {
@@ -20,7 +21,7 @@
     flex-flow: column;
     gap: 2em;
     justify-content: unset;
-    padding: 2em
+    padding: 2em;
   }
   display: flex;
   justify-content: space-between;

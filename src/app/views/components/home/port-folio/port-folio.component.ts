@@ -13,14 +13,14 @@ import { Project } from '../../../../data/NgRx/models/project'
   selector: 'app-port-folio',
   template: `
     <section id="portFolio" class="portFolio">
-      <div class="portFolio__titleWrapper" data-aos="zoom-in-down">
+      <div class="portFolio__titleWrapper" data-aos="fade-down-right">
         <h2 class="portFolio__titleWrapper__title">
           <span class="portFolio__titleWrapper__title--firstColor"
             >Take a look </span
           >at my previous work
         </h2>
       </div>
-      <div *ngIf="projects" class="portFolio__body" data-aos="zoom-in-up">
+      <div *ngIf="projects" class="portFolio__body" data-aos="fade-down-left">
         <div class="portFolio__body__firstWrapper">
           <figure class="portFolio__body__firstWrapper__imageWrapper">
             <img
