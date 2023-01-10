@@ -32,17 +32,19 @@ import { ProjectState } from '../../data/NgRx/controller/project/projectReducer'
 @Component({
   selector: 'app-home',
   template: `
-    <app-header></app-header>
-    <main class="main">
-      <app-landing></app-landing>
-      <app-about></app-about>
-      <app-skills></app-skills>
-      <app-port-folio></app-port-folio>
-    </main>
-    <app-footer></app-footer>
-    <app-back-to-top></app-back-to-top>
+    <body class="body">
+      <app-header></app-header>
+      <main class="main">
+        <app-landing></app-landing>
+        <app-about></app-about>
+        <app-skills></app-skills>
+        <app-port-folio></app-port-folio>
+      </main>
+      <app-footer></app-footer>
+      <app-back-to-top></app-back-to-top>
+    </body>
   `,
-  styles: [],
+  styles: ['.body {overflow-x: hidden;}'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
   subscription: Subscription | undefined

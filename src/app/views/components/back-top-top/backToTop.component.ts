@@ -17,7 +17,7 @@ import { Component, HostListener } from '@angular/core'
     </div>
   `,
   styles: [
-    '.backToTopWrapper__backToTop { position: fixed; top: 93%; right: 1%; font-size: 50px; color: #FF8E5E; cursor: pointer; opacity: 0; transition: all 200ms ease-in-out}',
+    '.backToTopWrapper__backToTop { position: fixed; top: 90%; right: 1%; font-size: 50px; color: #FF8E5E; cursor: pointer; opacity: 0; transition: all 200ms ease-in-out}',
     '.showBackToTop {opacity: 1; transition: all 200ms ease-in-out}',
   ],
 })
