@@ -33,9 +33,6 @@
   @media (max-width: $breakpointTablet) {
     gap: .5em;
   }
-  @media (max-width: $breakpointMobile) {
-    gap: 1em;
-  }
   display: flex;
   gap: 2em;
 }
