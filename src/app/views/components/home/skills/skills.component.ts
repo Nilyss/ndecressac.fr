@@ -12,13 +12,13 @@ import { Skill } from '../../../../data/NgRx/models/skill'
 @Component({
   selector: 'app-skills',
   template: `
-    <section class="skills">
-      <div class="skills__titleWrapper">
+    <section id="skills" class="skills">
+      <div class="skills__titleWrapper" data-aos="slide-right">
         <h2 class="skills__titleWrapper__title">
           My <span class="skills__titleWrapper__title--altColor">skills</span>
         </h2>
       </div>
-      <div class="skills__body">
+      <div class="skills__body" data-aos="flip-down">
         <ul class="skills__body__listWrapper">
           <li
             *ngFor="let skill of skills"

@@ -8,7 +8,9 @@
   background: $primaryBackgroundColor;
   display: flex;
   flex-flow: column;
-    justify-content: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .landing {
@@ -19,11 +21,20 @@
     flex-flow: column;
     gap: 2em;
     justify-content: unset;
-    padding: 2em
+    padding: 2em;
   }
   display: flex;
   justify-content: space-between;
   padding: 4em 10em;
+}
+
+.landing__contactWrapper {
+  position: absolute;
+  top: 4%;
+  left: 38%;
+}
+
+.landing__contactWrapper__positioning {
 }
 
 .landing__contentLeft {
@@ -80,6 +91,10 @@
   color: $primaryTextColor;
   font-size: 0.85em;
   width: 200px;
+}
+
+.navLink {
+  text-decoration: unset;
 }
 
 .landing__contentLeft__buttonWrapper {

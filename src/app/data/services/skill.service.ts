@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import * as Utils from '../Utils'
+import * as Utils from '../../utils/Utils'
 
 // Models
 import { Skill } from '../NgRx/models/skill'
@@ -12,9 +12,8 @@ import { catchError, Observable } from 'rxjs'
 export class SkillService {
   getSkills(): Observable<Skill[]> {
     return this.http
-      .get<Skill[]>(this.datasUrl, Utils.httpOptions)
+      .get<Skill[]>(Utils.skillEndpoints, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-  private datasUrl: string = 'http://localhost:4200/assets/skill.json'
   constructor(private http: HttpClient) {}
 }

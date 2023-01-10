@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import * as Utils from '../Utils'
+import * as Utils from '../../utils/Utils'
 
 // Models
 import { Stack } from '../NgRx/models/stack'
@@ -12,11 +12,9 @@ import { catchError, Observable } from 'rxjs'
 export class StackService {
   getAllStack(): Observable<Stack[]> {
     return this.http
-      .get<Stack[]>(this.datasUrl, Utils.httpOptions)
+      .get<Stack[]>(Utils.stackEndpoints, Utils.httpOptions)
       .pipe(catchError((error) => Utils.handleError(error, null)))
   }
-
-  private datasUrl: string = 'http://localhost:4200/assets/stacks.json'
 
   constructor(private http: HttpClient) {}
 }

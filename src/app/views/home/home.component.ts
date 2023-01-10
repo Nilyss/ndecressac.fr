@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Subscription, tap } from 'rxjs'
+import AOS from 'aos' // https://github.com/michalsnik/aos/tree/v2
 
 // NgRx
 import { Store } from '@ngrx/store'
@@ -39,6 +40,7 @@ import { ProjectState } from '../../data/NgRx/controller/project/projectReducer'
       <app-port-folio></app-port-folio>
     </main>
     <app-footer></app-footer>
+    <app-back-to-top></app-back-to-top>
   `,
   styles: [],
 })
@@ -110,6 +112,17 @@ export class HomeComponent implements OnInit, OnDestroy {
       )
       .subscribe()
   }
+
+  initAoS() {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    })
+    AOS.refreshHard()
+    AOS.refresh()
+  }
   constructor(
     private store: Store<{
       externalLink: ExternalLinkState
@@ -131,6 +144,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.getExperiences()
     this.getSkills()
     this.getProjects()
+    this.initAoS()
   }
   ngOnDestroy() {
     this.subscription?.unsubscribe()

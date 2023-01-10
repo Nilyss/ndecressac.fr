@@ -5,9 +5,7 @@
 
 .portFolio {
   @include sectionStyle;
-}
-
-.portFolio__titleWrapper {
+  overflow-x: hidden;
 }
 
 .portFolio__titleWrapper__title {

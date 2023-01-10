@@ -1,0 +1,32 @@
+[
+  {
+    "name": "HTML5"
+  },
+  {
+    "name": "CSS3"
+  },
+  {
+    "name": "JavaScript"
+  },
+  {
+    "name": "TypeScript"
+  },
+  {
+    "name": "Angular 2+"
+  },
+  {
+    "name": "React.js"
+  },
+  {
+    "name": "React-native"
+  },
+  {
+    "name": "NgRx"
+  },
+  {
+    "name": "Redux-toolkit"
+  },
+  {
+    "name": "Node.js"
+  }
+]

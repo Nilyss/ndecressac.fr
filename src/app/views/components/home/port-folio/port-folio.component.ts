@@ -12,18 +12,19 @@ import { Project } from '../../../../data/NgRx/models/project'
 @Component({
   selector: 'app-port-folio',
   template: `
-    <section class="portFolio">
-      <div class="portFolio__titleWrapper">
+    <section id="portFolio" class="portFolio">
+      <div class="portFolio__titleWrapper" data-aos="fade-down-right">
         <h2 class="portFolio__titleWrapper__title">
           <span class="portFolio__titleWrapper__title--firstColor"
             >Take a look </span
           >at my previous work
         </h2>
       </div>
-      <div *ngIf="projects" class="portFolio__body">
+      <div *ngIf="projects" class="portFolio__body" data-aos="fade-down-left">
         <div class="portFolio__body__firstWrapper">
           <figure class="portFolio__body__firstWrapper__imageWrapper">
             <img
+              *ngIf="projects[0]"
               class="portFolio__body__firstWrapper__imageWrapper__image"
               [src]="projects[0].thumbnail"
               [alt]="projects[0].name"
@@ -32,6 +33,7 @@ import { Project } from '../../../../data/NgRx/models/project'
           </figure>
           <figure class="portFolio__body__firstWrapper__imageWrapper">
             <img
+              *ngIf="projects[2]"
               class="portFolio__body__firstWrapper__imageWrapper__image"
               [src]="projects[2].thumbnail"
               [alt]="projects[2].name"
@@ -42,6 +44,7 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__secondWrapper">
           <figure class="portFolio__body__secondWrapper__imageWrapper">
             <img
+              *ngIf="projects[1]"
               class="portFolio__body__secondWrapper__imageWrapper__image"
               [src]="projects[1].thumbnail"
               [alt]="projects[1].name"
@@ -52,6 +55,7 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__thirdWrapper">
           <figure class="portFolio__body__thirdWrapper__imageWrapper">
             <img
+              *ngIf="projects[4]"
               class="portFolio__body__thirdWrapper__imageWrapper__image"
               [src]="projects[4].thumbnail"
               [alt]="projects[4].name"
@@ -60,6 +64,7 @@ import { Project } from '../../../../data/NgRx/models/project'
           </figure>
           <figure class="portFolio__body__thirdWrapper__imageWrapper">
             <img
+              *ngIf="projects[5]"
               class="portFolio__body__thirdWrapper__imageWrapper__image"
               [src]="projects[5].thumbnail"
               [alt]="projects[5].name"

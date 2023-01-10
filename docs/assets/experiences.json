@@ -1,0 +1,41 @@
+{
+  "educations": [
+    {
+      "school": "OpenClassrooms",
+      "degree": "Bac +2 Web Developer",
+      "date": "2022"
+    },
+    {
+      "school": "Lycée Andrée Malraux",
+      "degree": "Baccalauréat (Bachelor's degree) in Graphic Arts and Industries (Obtained with distinction)",
+      "date": "2006 — 2008"
+    },
+    {
+      "school": "Lycée Andrée Malraux",
+      "degree": "Professional Studies Certificate (BEP) in Communication and Graphic Industries",
+      "date": "2004 — 2006"
+    }
+  ],
+  "professionalExperiences": [
+    {
+      "company": "SITEL",
+      "position": "Customer Service Representative",
+      "date": "2021 — 2022"
+    },
+    {
+      "company": "CARL ZEISS MEDITEC",
+      "position": "Turn-Mill Technician",
+      "date": "2016 — 2018"
+    },
+    {
+      "company": "Self-employed entrepreneur",
+      "position": "Repair and Computer Training",
+      "date": "2015"
+    },
+    {
+      "company": "SITEL",
+      "position": "ADSL Technician",
+      "date": "2013 — 2014"
+    }
+  ]
+}

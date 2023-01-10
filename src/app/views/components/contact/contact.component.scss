@@ -1,0 +1,212 @@
+// ********** UTILS **********
+@import '../../../utils/styles/variables';
+@import '../../../utils/styles/mixins';
+@import '../../../utils/styles/keyframes';
+
+.contact {
+  color: $primaryTextColor;
+  border: 2px solid $secondaryTextColor;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.contact__formWrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+  width: 300px;
+}
+
+.contact__formWrapper__title {
+  font: $titleStyle;
+}
+
+.contact__formWrapper__title--altColor {
+  color: $secondaryTextColor;
+}
+
+.contact__formWrapper__inputsWrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+// ********** INPUTS **********
+
+.inputs {
+  height: 60px;
+  padding: .5em;
+  font-size: 16px;
+  color: $tertiaryTextColor;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  font-family: Ubuntu, 'sans-serif';
+  &:focus {
+    border: 2px solid $secondaryTextColor;
+    outline: none;
+  }
+}
+
+.textArea {
+  height: 150px;
+  padding-top: 20px;
+  font-size: 16px;
+  color: $tertiaryTextColor;
+  background: #f2f2f2;
+  font-family: Ubuntu, 'sans-serif';
+}
+
+.ng-valid[required] {
+  transition: All 100ms ease-out;
+  border-bottom: 3px solid $isValidColor;
+}
+
+.contact__formWrapper__inputsWrapper__name {
+  &:focus {
+    & + .contact__formWrapper__inputsWrapper__nameLabel {
+      transition: All 200ms ease;
+      top: 8px;
+      left: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+.contact__formWrapper__inputsWrapper__phone {
+  &:focus {
+    & + .contact__formWrapper__inputsWrapper__phoneLabel {
+      transition: All 200ms ease;
+      top: 85px;
+      left: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+.contact__formWrapper__inputsWrapper__email {
+  &:focus {
+    & + .contact__formWrapper__inputsWrapper__emailLabel {
+      transition: All 200ms ease;
+      top: 160px;
+      left: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+.contact__formWrapper__inputsWrapper__message {
+  &:focus {
+    & + .contact__formWrapper__inputsWrapper__messageLabel {
+      transition: All 200ms ease;
+      top: 238px;
+      left: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+// ********** LABELS **********
+.labels {
+  color: $tertiaryTextColor;
+  filter: $dropShadow;
+}
+
+.contact__formWrapper__inputsWrapper__nameLabel--required {
+  color: $warningColor;
+}
+
+.contact__formWrapper__inputsWrapper__nameLabel {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 23px;
+  left: 20px;
+
+}
+
+.contact__formWrapper__inputsWrapper__phoneLabel {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 96px;
+  left: 20px;
+}
+
+.contact__formWrapper__inputsWrapper__emailLabel {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 174px;
+  left: 20px;
+}
+
+.contact__formWrapper__inputsWrapper__messageLabel {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 260px;
+  left: 20px;
+}
+
+// ***** ACTIVE LABELS *****
+
+.contact__formWrapper__inputsWrapper__nameLabel--active {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  font-size: 12px;
+}
+
+.contact__formWrapper__inputsWrapper__phoneLabel--active {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 85px;
+  left: 5px;
+  font-size: 12px;
+}
+
+.contact__formWrapper__inputsWrapper__emailLabel--active {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 160px;
+  left: 5px;
+  font-size: 12px;
+}
+
+.contact__formWrapper__inputsWrapper__messageLabel--active {
+  transition: All 200ms ease;
+  position: absolute;
+  top: 238px;
+  left: 5px;
+  font-size: 12px;
+}
+
+.contact__formWrapper__inputsWrapper__isRequired {
+  display: flex;
+  align-self: center;
+}
+
+// ********** SUBMIT BUTTON **********
+
+.contact__formWrapper__inputsWrapper__submitButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__formWrapper__inputsWrapper__submitButtonWrapper__button {
+  border: 2px solid $primaryBackgroundColor;
+  font-family: Ubuntu, 'sans-serif';
+  font-size: 18px;
+  padding: .8em;
+  border-radius: 4px;
+  cursor: pointer;
+  &:active {
+    background: $secondaryTextColor;
+  }
+}
+
+.contact__formWrapper__inputsWrapper__submitResponseMessage {
+  margin-top: -1em;
+  text-align: center;
+}
