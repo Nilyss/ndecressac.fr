@@ -7,10 +7,12 @@ import { Project } from '../../models/project'
 import * as ProjectActions from './projectAction'
 
 export interface ProjectState {
+  isHomePageVisited: boolean
   project: Project[]
 }
 
 export const initialState = {
+  isHomePageVisited: false,
   project: [],
 }
 
@@ -24,6 +26,7 @@ export const projectReducer = createReducer(
   on(ProjectActions.getProjects, (state, props) => {
     return {
       ...state,
+      isHomePageVisited: true,
       project: props.project,
     }
   })

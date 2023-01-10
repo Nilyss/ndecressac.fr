@@ -12,8 +12,25 @@ import { Project } from '../../data/NgRx/models/project'
 
 @Component({
   selector: 'app-project-details',
-  template: ` <p>project-details works!</p> `,
-  styles: [],
+  template: `
+    <body class="body">
+      <app-header></app-header>
+      <main class="main">
+        <section class="projectDetails">
+          <div class="projectDetails__titleWrapper">
+            <h2 class="projectDetails__titleWrapper__title">
+              <span class="projectDetails__titleWrapper__title--firstColor">
+                Project details </span
+              ><br />
+              {{ project?.name }}
+            </h2>
+          </div>
+        </section>
+      </main>
+      <app-footer></app-footer>
+    </body>
+  `,
+  styleUrls: ['./project-details.component.scss'],
 })
 export class ProjectDetailsComponent implements OnInit, OnDestroy {
   subscription: Subscription | undefined
@@ -26,10 +43,10 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
     this.subscription = this.store
       .select(selectProjectData)
       .pipe(
-        tap((project: Project[]) => {
+        tap((projects: Project[]) => {
           this.queryParamsId =
             this.router.routerState.snapshot.root.queryParams['id']
-          project.find((project: Project) => {
+          projects.find((project: Project) => {
             if (project._id === this.queryParamsId) {
               this.project = project
             }

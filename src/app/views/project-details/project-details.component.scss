@@ -1,0 +1,27 @@
+// ********** UTILS **********
+@import '../../utils/styles/variables';
+@import '../../utils/styles/mixins';
+@import '../../utils/styles/keyframes';
+
+.body {
+  overflow-x: hidden;
+  background: $primaryBackgroundColor;
+  min-height: 100vh;
+}
+
+.projectDetails {
+  padding: 4em 15em;
+}
+
+.projectDetails__titleWrapper {
+  display: flex;
+}
+
+.projectDetails__titleWrapper__title {
+  color: $primaryTextColor;
+}
+
+.projectDetails__titleWrapper__title--firstColor {
+  color: $secondaryTextColor;
+  font: $titleStyle;
+}
