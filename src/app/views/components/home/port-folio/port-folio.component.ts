@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Subscription, tap } from 'rxjs'
+import { Router } from '@angular/router'
 
 // NgRx
 import { Store } from '@ngrx/store'
@@ -24,6 +25,7 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__firstWrapper">
           <figure class="portFolio__body__firstWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[0]._id)"
               *ngIf="projects[0]"
               class="portFolio__body__firstWrapper__imageWrapper__image"
               [src]="projects[0].thumbnail"
@@ -33,6 +35,7 @@ import { Project } from '../../../../data/NgRx/models/project'
           </figure>
           <figure class="portFolio__body__firstWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[2]._id)"
               *ngIf="projects[2]"
               class="portFolio__body__firstWrapper__imageWrapper__image"
               [src]="projects[2].thumbnail"
@@ -44,6 +47,7 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__secondWrapper">
           <figure class="portFolio__body__secondWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[1]._id)"
               *ngIf="projects[1]"
               class="portFolio__body__secondWrapper__imageWrapper__image"
               [src]="projects[1].thumbnail"
@@ -55,6 +59,7 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__thirdWrapper">
           <figure class="portFolio__body__thirdWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[4]._id)"
               *ngIf="projects[4]"
               class="portFolio__body__thirdWrapper__imageWrapper__image"
               [src]="projects[4].thumbnail"
@@ -64,6 +69,7 @@ import { Project } from '../../../../data/NgRx/models/project'
           </figure>
           <figure class="portFolio__body__thirdWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[5]._id)"
               *ngIf="projects[5]"
               class="portFolio__body__thirdWrapper__imageWrapper__image"
               [src]="projects[5].thumbnail"
@@ -89,7 +95,14 @@ export class PortFolioComponent implements OnInit, OnDestroy {
       .subscribe()
   }
 
-  constructor(private store: Store<{ project: ProjectState }>) {}
+  goToProjectDetails(id: string) {
+    return this.router.navigate([`/project`], { queryParams: { id } })
+  }
+
+  constructor(
+    private store: Store<{ project: ProjectState }>,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getProjects()

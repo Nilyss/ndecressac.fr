@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { HttpClientModule } from '@angular/common/http'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { HomeModule } from './views/home/home.module'
+import { ProjectDetailsModule } from './views/project-details/project-details.module'
 
 // ********** NGRX **********
 import { StoreModule } from '@ngrx/store'
@@ -25,6 +26,7 @@ import { ProjectReducer } from './data/NgRx/controller/project/projectReducer'
     AppRoutingModule,
     HttpClientModule,
     HomeModule,
+    ProjectDetailsModule,
     FontAwesomeModule,
     StoreModule.forRoot(
       {
