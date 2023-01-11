@@ -28,6 +28,18 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy])
     <body class="body">
       <app-header></app-header>
       <main class="main">
+        <div class="previous">
+          <a
+            class="previous__link"
+            routerLink=""
+            fragment="portFolio"
+            title="Previous page"
+          >
+            <span class="previous__link__icon material-symbols-outlined">
+              arrow_back
+            </span>
+          </a>
+        </div>
         <section class="projectDetails" data-aos="slide-left">
           <div class="projectDetails__titleWrapper">
             <h2 class="projectDetails__titleWrapper__title">
@@ -91,6 +103,19 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy])
               [src]="safeUrl"
               allowfullscreen
             ></iframe>
+          </div>
+
+          <!-- ********** PREVIOUS BUTTON ********** -->
+          <div class="projectDetails__previousButtonWrapper">
+            <button
+              routerLink=""
+              fragment="portFolio"
+              title="Previous page"
+              class="projectDetails__previousButtonWrapper__button"
+            >
+              <span class=" material-symbols-outlined"> arrow_back </span>
+              Previous
+            </button>
           </div>
         </section>
       </main>

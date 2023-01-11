@@ -29,6 +29,15 @@
 
 // ********** HEADER **********
 
+.previous {
+  padding: 2em;
+}
+
+.previous__link__icon {
+  font-size: 2em;
+  color: $secondaryTextColor;
+}
+
 .projectDetails__titleWrapper {
   display: flex;
   flex-flow: column;
@@ -113,4 +122,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// ********** PREVIOUS BUTTON **********
+
+.projectDetails__previousButtonWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.projectDetails__previousButtonWrapper__button {
+  @include buttonStyle;
 }
