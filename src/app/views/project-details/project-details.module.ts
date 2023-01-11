@@ -1,6 +1,7 @@
 // ********** MODULES **********
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { SwiperModule } from 'swiper/angular' // https://swiperjs.com/angular
 
 // ********** COMPONENTS **********
 import { ProjectDetailsComponent } from './project-details.component'
@@ -22,6 +23,11 @@ const detailsRoutes: Routes = [
 
 @NgModule({
   declarations: [ProjectDetailsComponent],
-  imports: [CommonModule, RouterModule.forChild(detailsRoutes), HomeModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(detailsRoutes),
+    HomeModule,
+    SwiperModule,
+  ],
 })
 export class ProjectDetailsModule {}

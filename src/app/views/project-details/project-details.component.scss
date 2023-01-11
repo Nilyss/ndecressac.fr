@@ -3,6 +3,11 @@
 @import '../../utils/styles/mixins';
 @import '../../utils/styles/keyframes';
 
+// ********** SWIPER IMPORT **********
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
 .body {
   overflow-x: hidden;
   background: $primaryBackgroundColor;
@@ -11,10 +16,16 @@
 
 .projectDetails {
   padding: 4em 15em;
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
 }
+
+// ********** HEADER **********
 
 .projectDetails__titleWrapper {
   display: flex;
+  flex-flow: column;
 }
 
 .projectDetails__titleWrapper__title {
@@ -24,4 +35,71 @@
 .projectDetails__titleWrapper__title--firstColor {
   color: $secondaryTextColor;
   font: $titleStyle;
+}
+
+.projectDetails__titleWrapper__projectLink {
+  color: $primaryTextColor;
+  font: $paragraphStyle;
+  font-style: oblique;
+}
+
+.projectDetails__titleWrapper__projectLink__link {
+  color: $secondaryTextColor;
+  font-style: normal;
+}
+
+// ********** OVERVIEW **********
+.projectDetails__overviewWrapper {}
+
+.projectDetails__overviewWrapper__overview {
+  font: $paragraphStyle;
+  color: $primaryTextColor;
+  text-align: center;
+}
+
+// ********** SWIPER STYLE **********
+.projectDetails__swiperWrapper {
+}
+
+.projectDetails__swiperWrapper__swiper {
+  height: 400px;
+  padding: 2em;
+}
+
+.projectDetails__swiperWrapper__swiper__imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectDetails__swiperWrapper__swiper__imageContainer__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: $secondaryTextColor;
+}
+
+.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+  background: $secondaryTextColor;
+}
+
+// ********** YOUTUBE INTEGRATION **********
+
+.projectDetails__youtubeWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.projectDetails__youtubeWrapper__youtube {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
