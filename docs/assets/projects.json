@@ -3,7 +3,7 @@
     "_id": "5a9b1b9e3d1e854a68a2668c",
     "name": "Web App — nailissa.fr",
     "stack": "Angular 2+ | NgRx | Node.js",
-    "overview": "Création d'un site pour l'entreprise Nailissa, prothésiste ongulaire de La Rochelle. Front-end en Angular 2+, programmation réactive (RxJs), utilisation de NgRx pour gérer les datas. Back-end en Node.js pour la sauvegarde d'utilisateurs, et de prestations.",
+    "overview": "Creating a website for Nailissa, a nail prosthetist from La Rochelle. Front-end using Angular 2+, reactive programming (RxJs), using NgRx to manage data. Back-end using Node.js for saving user and service information.",
     "thumbnail": "https://imgur.com/TJefrNl.png",
     "images": [
       "https://imgur.com/wEDFcdx.png",
@@ -19,7 +19,7 @@
     "_id": "5a9b1b9e3d1e854a68a2668d",
     "name": "Mobile App — Vente de Pizza",
     "stack": "React.Native | Redux-toolkit | Expo",
-    "overview": "Création d'une application mobile - test technique soumis à un collègue auquel je me suis soumis également, par curiosité.",
+    "overview": "Creating a mobile application - technical test submitted to a colleague whom i also submitted to, out of curiosity.",
     "thumbnail": "https://imgur.com/nDjbqtg.png",
     "images": [
       "https://imgur.com/wK8GIcA.png",
@@ -33,7 +33,7 @@
     "_id": "5a9b1b9e3d1e854a68a2668e",
     "name": " Web App — Clone de Netflix",
     "stack": "Angular 2+ | Node.js",
-    "overview": "Clone du site web Netflix afin d'approfondir Angular 2+ Compte utilisateur sur API REST crée pour l'occasion, Requête API existante pour les données relatives au films, et séries.",
+    "overview": "Cloning the Netflix website in order to deepen my understanding of Angular 2+. A user account on a REST API created for this purpose, existing API requests for movie and TV show data.",
     "thumbnail": "https://imgur.com/J5fOYmL.png",
     "images": [
       "https://imgur.com/rlCtQSu.png",
@@ -55,7 +55,7 @@
     "_id": "5a9b1b9e3d1e854a68a2668f",
     "name": "Web App — Porte-Folio",
     "stack": "React.js",
-    "overview": "Réalisation de mon porte-folio : Le présent site.",
+    "overview": "Creating the first version of my portfolio. I wanted to use React.js to deepen my knowledge of this framework.",
     "thumbnail": "https://imgur.com/U9finDZ.png",
     "images": [
       "https://imgur.com/OWr6KNH.png",
@@ -70,7 +70,7 @@
     "_id": "5a9b1b9e3d1e854a68a26690",
     "name": "Web App - Réseau Social",
     "stack": "React.js | Redux-toolkit | Node.js",
-    "overview": "Création d'un réseau social 'From Scratch', front-end comme back-end. Projet OpenClassrooms diplômant.",
+    "overview": "Creating a social network 'From Scratch', both front-end and back-end. A diploma-granting OpenClassrooms project.",
     "thumbnail": "https://imgur.com/xQ23CL0.png",
     "images": [
       "https://imgur.com/mLayrrU.png",
@@ -84,7 +84,7 @@
     "_id": "5a9b1b9e3d1e854a68a26691",
     "name": "Web App - API Rest",
     "stack": "Node.js",
-    "overview": "Création d'une API Rest en Node.js, utilisé un front-end déjà existant. Projet OpenClassrooms.",
+    "overview": "Creating a REST API using Node.js, using an existing front-end. An OpenClassrooms project.",
     "thumbnail": "https://imgur.com/wfvRpzQ.png",
     "images": ["https://imgur.com/vZAoPnY.png"],
     "url": "",

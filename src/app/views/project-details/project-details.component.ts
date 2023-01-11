@@ -28,7 +28,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy])
     <body class="body">
       <app-header></app-header>
       <main class="main">
-        <section class="projectDetails">
+        <section class="projectDetails" data-aos="slide-left">
           <div class="projectDetails__titleWrapper">
             <h2 class="projectDetails__titleWrapper__title">
               <span class="projectDetails__titleWrapper__title--firstColor">
@@ -54,6 +54,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy])
             <swiper
               class="projectDetails__swiperWrapper__swiper"
               [slidesPerView]="1"
+              [spaceBetween]="200"
               [navigation]="true"
               [pagination]="{ clickable: true }"
               [autoplay]="{ delay: 3000, disableOnInteraction: true }"
