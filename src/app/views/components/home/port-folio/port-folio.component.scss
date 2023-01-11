@@ -41,6 +41,11 @@
 
 .portFolio__body__firstWrapper__imageWrapper__image {
   width: 100%;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
 }
 
 .portFolio__body__secondWrapper {
@@ -57,7 +62,12 @@
 
 .portFolio__body__secondWrapper__imageWrapper__image {
   width: 100%;
-  object-position: 0 .45em;
+  object-position: 0 0.45em;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
 }
 
 .portFolio__body__thirdWrapper {
@@ -72,4 +82,9 @@
 
 .portFolio__body__thirdWrapper__imageWrapper__image {
   width: 100%;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
 }

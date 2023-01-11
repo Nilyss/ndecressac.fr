@@ -38,5 +38,6 @@ const homeRoutes: Routes = [{ path: '', component: HomeComponent }]
     FontAwesomeModule,
     FormsModule,
   ],
+  exports: [HeaderComponent, FooterComponent],
 })
 export class HomeModule {}

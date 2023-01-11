@@ -22,7 +22,7 @@ import EmailJsConfig from '../../../utils/emailJs.config'
 
           <input
             id="contactName"
-            pattern=""
+            pattern="^(([A-Za-z]+[\\-\\']?)*([A-Za-z]+)?\\s)+([A-Za-z]+[\\-\\']?)*([A-Za-z]+)?$"
             name="contactName"
             [(ngModel)]="contactNameInput"
             #contactName="ngModel"
@@ -49,7 +49,7 @@ import EmailJsConfig from '../../../utils/emailJs.config'
 
           <input
             id="contactPhone"
-            pattern=""
+            pattern="/^(?:0|\\+33 ?|0?0?33 ?|)([1-9] ?(?:[0-9] ?){8})$/i"
             name="contactPhone"
             [(ngModel)]="contactPhoneInput"
             #contactPhone="ngModel"
@@ -70,7 +70,7 @@ import EmailJsConfig from '../../../utils/emailJs.config'
 
           <input
             id="contactEmail"
-            pattern=""
+            pattern="^((\\w\\w+)[.\\-]?)+@(([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))"
             name="contactEmail"
             [(ngModel)]="contactEmailInput"
             #contactEmail="ngModel"
