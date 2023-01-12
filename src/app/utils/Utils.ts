@@ -36,8 +36,8 @@ export const projectEndpoints = isProduction
   : developmentBaseUrl + 'projects.json'
 
 export const downloadCvEndpoints = isProduction
-  ? productionBaseUrl + 'cv_decressac_nicolas_december22.pdf'
-  : developmentBaseUrl + 'cv_decressac_nicolas_december22.pdf'
+  ? productionBaseUrl + 'cv_decressac_nicolas_january23.pdf'
+  : developmentBaseUrl + 'cv_decressac_nicolas_january23.pdf'
 
 // ********** LOGS **********
 export const handleError = (error: Error, errorValue: any) => {
