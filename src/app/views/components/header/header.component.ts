@@ -107,7 +107,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.subscription = this.downloads
       .download(Utils.downloadCvEndpoints)
       .subscribe((blob: Blob) =>
-        saveAs(blob, 'cv_decressac_nicolas_december22.pdf')
+        saveAs(blob, 'cv_decressac_nicolas_january23.pdf')
       )
   }
 
