@@ -25,22 +25,22 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__firstWrapper">
           <figure class="portFolio__body__firstWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[6]._id)"
+              *ngIf="projects[6]"
+              class="portFolio__body__firstWrapper__imageWrapper__image"
+              [src]="projects[6].thumbnail"
+              [alt]="projects[6].name"
+              [title]="projects[6].name"
+            />
+          </figure>
+          <figure class="portFolio__body__firstWrapper__imageWrapper">
+            <img
               (click)="goToProjectDetails(projects[0]._id)"
               *ngIf="projects[0]"
               class="portFolio__body__firstWrapper__imageWrapper__image"
               [src]="projects[0].thumbnail"
               [alt]="projects[0].name"
               [title]="projects[0].name"
-            />
-          </figure>
-          <figure class="portFolio__body__firstWrapper__imageWrapper">
-            <img
-              (click)="goToProjectDetails(projects[2]._id)"
-              *ngIf="projects[2]"
-              class="portFolio__body__firstWrapper__imageWrapper__image"
-              [src]="projects[2].thumbnail"
-              [alt]="projects[2].name"
-              [title]="projects[2].name"
             />
           </figure>
         </div>
@@ -59,22 +59,22 @@ import { Project } from '../../../../data/NgRx/models/project'
         <div class="portFolio__body__thirdWrapper">
           <figure class="portFolio__body__thirdWrapper__imageWrapper">
             <img
+              (click)="goToProjectDetails(projects[2]._id)"
+              *ngIf="projects[2]"
+              class="portFolio__body__thirdWrapper__imageWrapper__image"
+              [src]="projects[2].thumbnail"
+              [alt]="projects[2].name"
+              [title]="projects[2].name"
+            />
+          </figure>
+          <figure class="portFolio__body__thirdWrapper__imageWrapper">
+            <img
               (click)="goToProjectDetails(projects[4]._id)"
               *ngIf="projects[4]"
               class="portFolio__body__thirdWrapper__imageWrapper__image"
               [src]="projects[4].thumbnail"
               [alt]="projects[4].name"
               [title]="projects[4].name"
-            />
-          </figure>
-          <figure class="portFolio__body__thirdWrapper__imageWrapper">
-            <img
-              (click)="goToProjectDetails(projects[5]._id)"
-              *ngIf="projects[5]"
-              class="portFolio__body__thirdWrapper__imageWrapper__image"
-              [src]="projects[5].thumbnail"
-              [alt]="projects[5].name"
-              [title]="projects[5].name"
             />
           </figure>
         </div>
