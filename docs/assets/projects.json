@@ -89,5 +89,20 @@
     "images": ["https://imgur.com/vZAoPnY.png"],
     "url": "",
     "YtUrl": ""
+  },
+  {
+    "_id": "5a9b1b9e3d1e854a68a26692",
+    "name": "Web App - finalgear.fr",
+    "stack":"Angular 2+ | NgRx",
+    "overview": "Creating a website for Final Gear, a French YouTuber who talks about Japanese video games. The front-end uses Angular 2+ and reactive programming with RxJs, and NgRx is used to manage data obtained from HTTP requests.",
+    "thumbnail": "https://i.imgur.com/8uks4Xm.png",
+    "images": [
+      "https://i.imgur.com/uOwgelj.png",
+      "https://i.imgur.com/kMcTksP.png",
+      "https://i.imgur.com/8T6rLr3.png",
+      "https://i.imgur.com/8uks4Xm.png"
+    ],
+    "url": "https://nilyss.github.io/finalGear-webApp",
+    "YtUrl": "https://youtu.be/pjwnrqhdFNQ"
   }
 ]
